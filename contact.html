@@ -65,7 +65,7 @@
                 </div> -->
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Book Us<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -76,12 +76,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Contact</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Book Us</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Book Us</li>
                         </ol>
                     </nav>
                 </div>
@@ -91,11 +91,11 @@
     <!-- Header End -->
 
 
-    <!-- Contact Start -->
+    <!-- Book Us Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Book Us Us</h6>
                
             </div>
             <div class="row g-4">
@@ -131,119 +131,177 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                   
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14739.801184902779!2d17.036168509443957!3d-22.543534586871676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1c7f020c742d%3A0xfbcf6bbc42e0e390!2sKhomasdal%2C%20Windhoek!5e0!3m2!1sen!2sna!4v1704192406249!5m2!1sen!2sna"
+                            frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0">
+                        </iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form action="https://formspree.io/f/mleqebkb" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name"name = "name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required>
                                     <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="contact-number" placeholder="Your Contact Number" name="contact-number" required>
+                                    <label for="contact-number">Phone Number</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <select class="form-select" id="service" name="service" aria-label="Service" onchange="updateSubjects()" required>
+                                        <option selected>Select Service</option>
+                                        <option value="high-school-tutoring">High School Tutoring</option>
+                                        <option value="computer-science">Computer Science Subjects</option>
+                                        <option value="oshiwambo-learning">Oshiwambo Learning Language</option>
+                                        <option value="web-development">Web Development</option>
+                                    
+                                    </select>
+                                    <label for="service">Service</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="subject" name="subject" aria-label="Subject" required>
+                                        <option selected>Select Subject</option>
+                                    </select>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <select class="form-select" id="day" name="day" aria-label="Day" required>
+                                        <option selected>Select Day</option>
+                                        <option value="monday">Monday</option>
+                                        <option value="tuesday">Tuesday</option>
+                                        <option value="wednesday">Wednesday</option>
+                                        <option value="thursday">Thursday</option>
+                                        <option value="friday">Friday</option>
+                                    </select>
+                                    <label for="day">Day</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="time" name="time" aria-label="Time" required>
+                                        <option selected>Select Time</option>
+                                        <option value="morning">Morning</option>
+                                        <option value="afternoon">Afternoon</option>
+                                        <option value="evening">Evening</option>
+                                    </select>
+                                    <label for="time">Time</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="tutoring-mode" name="tutoring-mode" aria-label="Tutoring Mode" required>
+                                        <option selected>Select Tutoring Mode</option>
+                                        <option value="online">Online</option>
+                                        <option value="offline">Offline</option>
+                                    </select>
+                                    <label for="tutoring-mode">Tutoring Mode</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">Request Session</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Book Us End -->
 
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Quick Link</h4>
-                <a class="btn btn-link" href="about.html">About Us</a>
-                <a class="btn btn-link" href="contact.html">Contact Us</a>
-                <a class="btn btn-link" href="courses.html">Services</a>
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="courses.html">Services</a>
+                    <a href="contact.html">Book Us</a>
 
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>3734 IRIS Street, Khomasdal, Windhoek</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+264816889761</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@tutornge.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Gallery</h4>
-                <div class="row g-2 pt-2">
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Book Us</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>3734 IRIS Street, Khomasdal, Windhoek</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+264816889761</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@tutornge.com</p>
+                    <div class="d-flex pt-2">
+                       
+                        <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a> -->
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/tutornge-academy/about/?viewAsMember=true"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="https://qubithub.onrender.com/">Qubit Tech Solutions</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Help</a>
-                        
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/tutor1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/tutor2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/tutor3.png" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/tutor4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="https://qubithub.onrender.com/">Qubit Tech Solutions</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="courses.html">Services</a>
+                            <a href="contact.html">Book Us</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Footer End -->
-
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -256,6 +314,33 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        function updateSubjects() {
+            var serviceSelect = document.getElementById("service");
+            var subjectSelect = document.getElementById("subject");
+            subjectSelect.innerHTML = "<option selected>Select Subject</option>"; // Reset the subject options
+    
+            if (serviceSelect.value === "high-school-tutoring") {
+                addSubjects(["English", "History(AS Level)", "Mathematics(AS Level)", "Geography(AS Level)", "Physics(AS Level)", "Biology(AS Level)", "Oshindonga/Oshikwanyama"]);
+            } else if (serviceSelect.value === "computer-science") {
+                addSubjects(["Database Fundamentals", "Introduction to Computing", "Mathematics for Computing and Informatics 1A AND 1B", "Data Structures and Algorithms 1 & 2", "Programming 1", "Data Networks", "Applied Statistics and Probability", "Operating Systems", "Programming 2", "Distributed Systems and Applications", "Data Analytics", "Web Application Development", "Artificial Intelligence", "Compiler Techniques", "Mobile Application Development"]);
+            } else if (serviceSelect.value === "oshiwambo-learning") {
+                addSubjects(["Writing", "Speaking"]);
+            } else if (serviceSelect.value === "web-development") {
+                addSubjects(["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"]);
+            }
+        }
+    
+        function addSubjects(subjects) {
+            var subjectSelect = document.getElementById("subject");
+            subjects.forEach(function (subject) {
+                var option = document.createElement("option");
+                option.value = subject.toLowerCase().replace(/\s+/g, '-'); // Convert to lowercase and replace spaces with dashes
+                option.text = subject;
+                subjectSelect.add(option);
+            });
+        }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

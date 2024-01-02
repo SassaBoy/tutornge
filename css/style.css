@@ -97,7 +97,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #349c5e;
 }
 
 @media (max-width: 991.98px) {
@@ -192,7 +192,7 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
+    background: #349c5e;
     border-color: var(--primary);
 }
 
@@ -384,7 +384,7 @@
 
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: #349c5e;
 }
 
 .footer .btn.btn-link {
