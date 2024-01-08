@@ -292,6 +292,25 @@
 .team-item:hover img {
     transform: scale(1.1);
 }
+/* Additional styles for the quotes */
+.testimonial {
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.blockquote-footer {
+    color: #fff;
+    font-size: 14px;
+}
 
 
 /*** Testimonial ***/
@@ -367,65 +386,73 @@
 }
 
 
-/*** Footer ***/
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #349c5e;
+}
+
 .footer .btn.btn-social {
-    margin-right: 5px;
-    width: 35px;
-    height: 35px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
-    font-weight: normal;
-    border: 1px solid #FFFFFF;
-    border-radius: 35px;
-    transition: .3s;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
-
 .footer .btn.btn-social:hover {
-    color: #349c5e;
+    background-color: #349c5e;
+    border-color: #349c5e;
 }
 
 .footer .btn.btn-link {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
-    font-size: 15px;
+    color: #fff;
+    font-size: 16px;
     font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .footer .btn.btn-link::before {
-    position: relative;
     content: "\f105";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: bold;
     margin-right: 10px;
 }
 
 .footer .btn.btn-link:hover {
-    letter-spacing: 1px;
-    box-shadow: none;
+    opacity: 0.8;
 }
 
 .footer .copyright {
     padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--light);
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-menu a:last-child {
@@ -474,82 +501,144 @@
     margin-bottom: 15px;
 }
 
-.package-item {
+.container-xxl {
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 30px;
+    background-color: #ffffff;
     border-radius: 10px;
+}
+
+.package-item {
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background-color: #fff;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensure packages have the same height */
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
 }
 
 .package-item:hover {
     transform: scale(1.05);
 }
 
-.package-item img {
-    width: 100%;
-    height: auto;
-    flex-grow: 1;
-}
-
-.package-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
 .package-item h5 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1rem; /* Adjusted font size */
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
 }
 
 .package-item h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.5rem; /* Adjusted font size */
-    color: var(--primary);
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #28a745;
 }
 
-.package-item .btn-primary {
-    background-color: var(--primary);
+.price {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.btn-get-started {
+    border-radius: 30px;
+    background-color: #28a745;
     color: #fff;
-    border-radius: 0;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    margin-top: auto; /* Align button to the bottom */
-    align-self: center; /* Center the button horizontally */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.package-item:hover .btn-primary {
-    background-color: var(--primary);
+.btn-get-started:hover {
+    background-color: #28a745;
 }
 
-.package-item ul {
-    list-style: none;
+.list-unstyled {
     padding: 0;
     margin: 0;
-    text-align: left;
-    color: #555;
+    list-style: none;
+    padding-left: 20px;
 }
 
-.package-item ul li {
+.list-unstyled li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.list-unstyled li i {
+    margin-right: 10px;
+    color: #28a745;
+}
+
+.radio-label {
+    font-size: 1rem;
+    color: #28a745;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+/* Additional styles for the quick links */
+.quick-links-box {
+    
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.quick-links-box h4 {
+    font-size: 18px;
+}
+
+.quick-links-box ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.quick-links-box li {
     margin-bottom: 10px;
-    font-size: 0.9rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 767px) {
-    .package-item {
-        margin-bottom: 30px;
-    }
+.quick-links-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.quick-links-box a:hover {
+    color: #349c5e;
+}
+/* Additional styles for the contact info */
+.contact-info-box {
+    
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.contact-info-box h4 {
+    font-size: 18px;
+}
+
+.contact-info-box address, .contact-info-box p {
+    margin-bottom: 10px;
+}
+
+.contact-info-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info-box a:hover {
+    color: #349c5e;
 }
